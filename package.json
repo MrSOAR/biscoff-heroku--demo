@@ -1,6 +1,9 @@
 {
   "name": "biscoff-starter",
   "version": "1.0.0",
+  "engine": {
+    "node": "14.6.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

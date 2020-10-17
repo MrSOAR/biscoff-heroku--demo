@@ -121,7 +121,7 @@ app.post('/users/logout', authenticatedOnlyMiddleware, usersController.logout)
 mongoose.connect( mongoURI, { useNewUrlParser: true, useUnifiedTopology: true } ) //it is returning a promise
   .then(response => { //if connection is successful to DB, it will connect to the express
     console.log('DB connection successful')
-    app.listen(port, () => {
+    app.listen(process.env.PORT || port, () => { //process.env.port will help the heroku app to inject PORT to the variable
       console.log(`Biscoff Bakery app listening on port: ${port}`)
     })
   })
